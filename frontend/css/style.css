@@ -65,3 +65,55 @@
             transform: translateY(-2px);
             background: var(--blue-soft);
         }
+:root {
+  /* Ensure your variables are defined, or use fallbacks */
+  --card: #ffffff; 
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px; /* Modern way to handle spacing between flex items */
+  align-items: flex-start; /* Prevents sidebar from stretching vertically */
+}
+
+.matches {
+  flex: 3;
+  min-width: 0; /* Prevents flex items from overflowing container */
+}
+
+.match {
+  background: var(--card, #fff);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds depth */
+}
+
+.match button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.betslip {
+  flex: 1;
+  background: var(--card, #fff);
+  /* margin-left: 20px; */ /* Removed in favor of gap in .container */
+  padding: 15px;
+  border-radius: 6px;
+  position: sticky; /* Keeps betslip visible while scrolling matches */
+  top: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .matches, .betslip {
+    flex: none;
+    width: 100%;
+  }
+}
+
