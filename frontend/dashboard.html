@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORBX Bet Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <h1>ORBX<span>BET</span></h1>
+        <div id="walletDisplay">0.00 ORBX</div>
+    </header>
+
+    <main class="container">
+        <!-- Match listings will be injected here -->
+        <section class="matches" id="matches"></section>
+
+        <!-- Betting interface -->
+        <aside class="betslip">
+            <h3>Bet Slip</h3>
+            <p id="selectedMatch">No match selected</p>
+            <p>Odds: <span id="odds">0.00</span></p>
+            
+            <input type="number" id="stake" placeholder="Stake (ORBX)" min="0">
+            
+            <p>Potential Win: <span id="win">0.00</span> ORBX</p>
+            <button type="button" onclick="placeBet()">Place Bet</button>
+        </aside>
+    </main>
+
+    <!-- Use defer to ensure the DOM is ready before scripts run -->
+    <script src="js/odds.js" defer></script>
+    <script src="js/betslip.js" defer></script>
+</body>
+</html>
 
