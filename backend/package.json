@@ -1,0 +1,17 @@
+{
+  "name": "orbx-bet-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3",
+    "stellar-sdk": "^13.0.0",
+    "axios": "^1.7.9"
+  }
+}
